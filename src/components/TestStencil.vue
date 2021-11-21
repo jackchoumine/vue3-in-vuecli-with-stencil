@@ -2,7 +2,7 @@
  * @Description : 
  * @Date        : 2021-11-22 04:33:17 +0800
  * @Author      : JackChou
- * @LastEditTime: 2021-11-22 05:04:37 +0800
+ * @LastEditTime: 2021-11-22 06:00:08 +0800
  * @LastEditors : JackChou
 -->
 <template>
@@ -16,6 +16,7 @@
       :person.prop="{ name: 'jack' }"
       :personArray.prop="persons"
       @ratingChange="ratingChange"
+      :methodFromParent.prop="methodFromParent"
     />
     <button @click="changeRating">changeRating</button>
   </div>
@@ -63,6 +64,10 @@ export default {
     ratingChange({ detail }) {
       console.log("rating changed", detail);
       // alert(`rating change ${detail.value}`);
+    },
+    methodFromParent(value, person, maxValue) {
+      console.log(value, person, maxValue);
+      return Math.min(value + Math.random(), person.age || 0, maxValue);
     },
   },
 };
