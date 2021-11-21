@@ -2,7 +2,7 @@
  * @Description : 
  * @Date        : 2021-11-22 04:33:17 +0800
  * @Author      : JackChou
- * @LastEditTime: 2021-11-22 04:55:54 +0800
+ * @LastEditTime: 2021-11-22 05:04:37 +0800
  * @LastEditors : JackChou
 -->
 <template>
@@ -17,7 +17,6 @@
       :personArray.prop="persons"
       @ratingChange="ratingChange"
     />
-    <!-- 无法监听事件 -->
     <button @click="changeRating">changeRating</button>
   </div>
 </template>
@@ -63,7 +62,7 @@ export default {
     },
     ratingChange({ detail }) {
       console.log("rating changed", detail);
-      alert(`rating change ${detail.value}`);
+      // alert(`rating change ${detail.value}`);
     },
   },
 };
