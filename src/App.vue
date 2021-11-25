@@ -1,16 +1,19 @@
 <template>
   <div class="app">
     <TestStencil />
+    <HelloWorld />
   </div>
 </template>
 
 <script>
 import TestStencil from "./components/TestStencil.vue";
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
   name: "App",
   components: {
     TestStencil,
+    HelloWorld,
   },
 };
 </script>
